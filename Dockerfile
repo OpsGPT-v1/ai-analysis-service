@@ -19,8 +19,6 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PATH="/opt/venv/bin:$PATH"
 
-RUN apt-get update && apt-get upgrade -y && rm -rf /var/lib/apt/lists/*
-
 RUN groupadd --system appuser \
     && useradd --system --gid appuser --create-home --home-dir /home/appuser appuser
 
