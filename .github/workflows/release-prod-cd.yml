@@ -6,6 +6,9 @@ on:
 
 jobs:
   deploy-prod:
+    permissions:
+      id-token: write
+      contents: read
     uses: OpsGPT-v1/shared-workflow/.github/workflows/prod-deploy.yml@main
     with:
       service_name: 'ai-analysis-service'

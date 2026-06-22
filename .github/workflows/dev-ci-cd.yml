@@ -18,6 +18,9 @@ jobs:
 
   deploy:
     needs: ci
+    permissions:
+      id-token: write
+      contents: read
     uses: OpsGPT-v1/shared-workflow/.github/workflows/dev-deploy.yml@main
     with:
       service_name: 'ai-analysis-service'
